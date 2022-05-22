@@ -21,10 +21,16 @@ const GoogleLogin = () => {
     },[user, from, navigate])
 
 
-    let load;
-    if(loading){
-       load= <Loading></Loading>
-    }
+    // let load;
+    // if(loading){
+    //    load= <Loading></Loading>
+    // }
+
+    //   let load;
+      if(loading){
+      return <Loading></Loading>
+      }
+
     let errorMessage;
     if (error) {
         errorMessage= <p className='text-red-500'>{error?.message}</p>
@@ -35,7 +41,7 @@ const GoogleLogin = () => {
         <div>   
             <div>
             {/* {alertMessage} */}
-            {load}
+            {/* {load} */}
             {errorMessage}
             <button  onClick={() => signInWithGoogle()} 
             className="btn btn-accent font-bold text-white w-80 text-base">Continue with Google</button>

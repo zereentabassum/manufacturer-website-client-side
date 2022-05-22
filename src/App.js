@@ -12,6 +12,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
+
   return (
     <div className="App">
     <Header></Header>

@@ -34,23 +34,26 @@ const Login = () => {
 
   
     
-    let load;
-    if(loading){
-    //    load= <Loading></Loading>
+    // let load;
+    // if(loading){
+    // //    load= <Loading></Loading>
 
-
+      let load;
+      if(loading){
+      return <Loading></Loading>
+      }
      
-     
 
 
-        load = <div className='flex justify-center item-center'>
-        <button className="btn btn-square loading text-secondary bg-white border-0 text-bold"></button>
-        </div>
+    //     load = <div className='flex justify-center item-center'>
+    //     <button className="btn btn-square loading text-secondary bg-white border-0 text-bold"></button>
+    //     </div>
+    // }
 //     load = <div className="flex items-center justify-center ">
 //     <div className="w-40 h-40 border-t-4 border-b-4 border-blue-500 rounded-full animate-spin"></div>
 // </div>
       
-}
+
 
 
     let errorMessage;
@@ -97,19 +100,20 @@ const Login = () => {
                     message:'Password is Required'
                 },
 
-                 minLength: {
-                value: 6,
-                message: 'Password must be 6 characters or long' 
-              } })}
+            //      minLength: {
+            //     value: 6,
+            //     message: 'Password must be 6 characters or long' 
+            //   } 
+        })}
             />
              {errors.email?.type ==='required' && <span className='text-red-500 '>{errors.password.message}</span>}
-            {errors.password?.type ==='minLength' && <span className='text-red-500'>{errors.password.message}</span>}
+            {/* {errors.password?.type ==='minLength' && <span className='text-red-500'>{errors.password.message}</span>} */}
                 
         {/*--------- Login Button ------- */}
-              {load}
+              {/* {load} */}
               {errorMessage}
             <input type="submit" value="Login" className='btn btn-accent w-full text-base mt-5 text-white' />
-            <p className='pt-3'>New to Doctors Portal?  <Link className='text-blue-400' to='/signup'> Create an account</Link></p>
+            <p className='pt-3'>Don't have an account?<Link className='text-blue-400' to='/signup'> Create an account</Link></p>
           
              </form>
 
@@ -121,7 +125,7 @@ const Login = () => {
          
             <div className='divider text-2xl '>Or</div>
             <div className="card-actions justify-center font-semibold">
-            {/* <button className="btn btn-secondary text-white">Login</button> */}
+         
             <GoogleLogin></GoogleLogin>
             </div>
             </div>
