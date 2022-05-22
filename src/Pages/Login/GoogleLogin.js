@@ -38,7 +38,7 @@ const GoogleLogin = () => {
             {load}
             {errorMessage}
             <button  onClick={() => signInWithGoogle()} 
-            className="btn btn-outline btn-accent font-bold  w-80 text-base">Continue with Google</button>
+            className="btn btn-accent font-bold text-white w-80 text-base">Continue with Google</button>
           
         </div>
         </div>
