@@ -1,0 +1,8 @@
+.banner{
+    background-image: url('https://www.ibik.ru/images/articels/blok/92/multi-user_pc.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner h1{
+    text-shadow: 2px 2px 6px;
+}
