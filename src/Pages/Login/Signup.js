@@ -6,6 +6,9 @@ import auth from '../../firebase.config';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Signup = () => {

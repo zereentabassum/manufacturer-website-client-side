@@ -10,6 +10,8 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
+import RequireAuth from './Pages/Login/RequireAuth';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
 
@@ -24,6 +26,10 @@ function App() {
     <Route path='signup' element={<Signup></Signup>}></Route>
     <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
     <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+    <Route path='purchase' element={<RequireAuth>
+      <Purchase></Purchase>
+    </RequireAuth>}></Route>
+
     <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
     <Footer></Footer>
