@@ -16,7 +16,7 @@ const Parts = () => {
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-10 mx-8'>
             {
                   
-                    parts.map(part=> <Part part={part}></Part>)
+                    parts.map(part=> <Part key={part._id} part={part}></Part>)
               
             }
             </div>
