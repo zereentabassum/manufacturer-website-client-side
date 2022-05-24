@@ -19,7 +19,7 @@ const Signup = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification: true});
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -29,18 +29,20 @@ const Signup = () => {
     await createUserWithEmailAndPassword(data.email, data.password)
     await updateProfile({ displayName: data.name});
     // console.log('profile updated');
-    navigate('/home')
+    toast('Please check your email for verification')
+
+    
     }
-    if(user){
-        console.log(user);
-    }
+    // if(user){
+    //     // console.log(user);
+    // }
     
     // let load;
     // if(loading || updating){
     //    return <Loading></Loading>
 
     let load;
-    if(loading){
+    if(loading ||updating){
     //    load= <Loading></Loading>
 
 
@@ -147,6 +149,7 @@ const Signup = () => {
             </div>
         </div>
         </div>
+        <ToastContainer/>
     </div>
     );
 };

@@ -1,15 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import GoogleLogin from './GoogleLogin';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.config';
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { sendPasswordResetEmail } from 'firebase/auth';
+
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    // const emailRef = useRef('');
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -56,13 +60,25 @@ const Login = () => {
 //     <div className="w-40 h-40 border-t-4 border-b-4 border-blue-500 rounded-full animate-spin"></div>
 // </div>
       
-
-
-
     let errorMessage;
     if (error) {
         errorMessage= <p className='text-red-500'>{error?.message}</p>
     }
+
+
+
+    const passwordReset = async() =>{
+              
+//         console.log(email);
+//         await sendPasswordResetEmail(auth, email)
+//           .then(() =>{
+//                toast('Email sent');
+//               }
+             
+//        ) 
+      
+    }
+
 
     return (
        
@@ -75,7 +91,7 @@ const Login = () => {
                 {/*------------ Email -----------*/}
         <form onSubmit={handleSubmit(onSubmit)}>
             <label className='label'>Email:</label>
-            <input type="email" placeholder="Your Email" className="input input-bordered input-accent w-full max-w-xs mb-2 text-base" 
+            <input type="email" name="ëmail" placeholder="Your Email" className="input input-bordered input-accent w-full max-w-xs mb-2 text-base" 
             {...register("email",{
 
                 required:{
@@ -111,6 +127,8 @@ const Login = () => {
             />
              {errors.email?.type ==='required' && <span className='text-red-500 '>{errors.password.message}</span>}
             {/* {errors.password?.type ==='minLength' && <span className='text-red-500'>{errors.password.message}</span>} */}
+            <button onClick={passwordReset} class="btn btn-link">Forgot Password? Reset</button>
+
                 
         {/*--------- Login Button ------- */}
               {/* {load} */}
@@ -134,6 +152,7 @@ const Login = () => {
             </div>
         </div>
         </div>
+        <ToastContainer/>
     </div>
 
     );
