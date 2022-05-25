@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Part.css';
 
 const Part = ({ part }) => {
-    const {name, img, price, body, minQuantity, availableQuantity} = part;
+    const {_id, name, img, price, body, minQuantity, availableQuantity} = part;
+
+    const navigate = useNavigate();
+    const navigateToPurchase = () =>{
+        navigate(`/parts/${_id}`)
+    }
 
     return (
         <div>
@@ -19,7 +25,7 @@ const Part = ({ part }) => {
                 <h6><span className='text-gray-500'>Available Quantity:</span> {availableQuantity} </h6>
                 </div>
                 <div class="card-actions">
-                <button class="btn bg-gradient-to-r from-accent to-primary text-white px-9 ">Purchase</button>
+                <button onClick={navigateToPurchase}  class="btn bg-gradient-to-r from-accent to-primary text-white px-9 ">Purchase</button>
 
                 </div>
             </div>

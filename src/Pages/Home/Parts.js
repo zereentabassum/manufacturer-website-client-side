@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useParts from '../Shared/useParts';
 import Part from './Part';
 import './Parts.css';
 
 const Parts = () => {
-    const [parts, setParts] = useState([]);
+  
+    const [parts, setParts] = useParts();
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/parts')
-        .then(res=> res.json())
-        .then(data=> setParts(data));
-    } ,[])
     return (
         <div className='pt-28 parts bg-gradient-to-r from-purple-100 to-neutral pb-10'>
             <h1 className='text-5xl font-mono pb-7'>Computer Parts</h1>

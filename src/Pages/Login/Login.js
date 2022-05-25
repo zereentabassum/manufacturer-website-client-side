@@ -87,7 +87,7 @@ const Login = () => {
         <div className="card w-96 shadow-xl">
         <div className="card-body">
             <h2 className="text-center text-4xl">Login</h2>
-            <div className='py-4'>
+            <div className='pb-4'>
                 {/*------------ Email -----------*/}
         <form onSubmit={handleSubmit(onSubmit)}>
             <label className='label'>Email:</label>
@@ -127,7 +127,7 @@ const Login = () => {
             />
              {errors.email?.type ==='required' && <span className='text-red-500 '>{errors.password.message}</span>}
             {/* {errors.password?.type ==='minLength' && <span className='text-red-500'>{errors.password.message}</span>} */}
-            <button onClick={passwordReset} class="btn btn-link">Forgot Password? Reset</button>
+            <p onClick={passwordReset} class="btn btn-link text-blue-400 text-left">Forgot Password? Reset</p>
 
                 
         {/*--------- Login Button ------- */}
