@@ -15,6 +15,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
     <Route path='login' element={<Login></Login>}></Route>
     <Route path='signup' element={<Signup></Signup>}></Route>
     <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+
     <Route path='parts/:_id' element={<RequireAuth>
       <Purchase></Purchase>
     </RequireAuth>}></Route>
@@ -41,6 +44,8 @@ function App() {
     <Route index element={<MyProfile></MyProfile>}></Route>
     <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
     <Route path='addreview' element={<AddReview></AddReview>}></Route>
+    <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+    <Route path='manageorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
 
 
 
