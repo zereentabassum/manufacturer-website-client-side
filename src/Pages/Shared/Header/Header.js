@@ -10,13 +10,14 @@ const Header = () => {
 
     const handleSignOut=()=>{
       signOut(auth);
+      localStorage.removeItem('accessToken');
     }
 
     const menuItems = <>
     {
       user && 
-     <div className="">
-        <h2 className='font-semibold text-xl text-left pr-5'>Username:    {user.displayName}</h2>
+     <div className="text-left pr-14 pt-2">
+        <h2 className='font-bold text-2xl text-left '>Username:    {user.displayName}</h2>
      </div>
      
      
@@ -24,7 +25,7 @@ const Header = () => {
             <li><Link className='text-xl font-semibold px-6' to='/home'>Home</Link></li>
         <li><Link className='text-xl font-semibold px-6' to='/blogs'>Blogs</Link></li>
         {
-          user?<button onClick={handleSignOut} className='btn btn-secondary px-6'>Sign out</button>
+          user?<button onClick={handleSignOut} className='btn btn-secondary px-6 font-semibold bg-purple-200'>Sign out</button>
         :
         <li><Link className='text-xl font-semibold px-6' to='/login'>Login</Link></li>
         }

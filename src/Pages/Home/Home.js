@@ -4,6 +4,7 @@ import Parts from './Parts';
 import Reviews from './Reviews';
 import BusinessSummery from './BusinessSummery';
 import Carousal from './Carousal';
+import LastSection from './LastSection';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>
             <Carousal></Carousal>
+            <LastSection></LastSection>
 
         </div>
     );

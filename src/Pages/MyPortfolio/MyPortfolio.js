@@ -3,7 +3,8 @@ import React from 'react';
 const MyPortfolio = () => {
     return (
         <div>
-            <h1>My Portfolio</h1>
+            <h1 className='text-4xl'>My Portfolio</h1>
+            
         </div>
     );
 };

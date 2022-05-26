@@ -18,8 +18,8 @@ const Dashboard = () => {
             <ul class="menu p-4 overflow-y-auto w-48 bg-purple-200 text-base-content">
                 {user && <>
                 <li><Link to="/dashboard">My Profile</Link></li>
-                <li><Link to="/dashboard/myorders">My Reviews</Link></li>
-                <li><Link to="/dashboard/addreview">My History</Link></li>
+                <li><Link to="/dashboard/myorders">My Orders</Link></li>
+                <li><Link to="/dashboard/addreview">Add a review</Link></li>
                 </>
                 }
                 {/* { admin && <>

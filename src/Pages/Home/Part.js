@@ -20,7 +20,7 @@ const Part = ({ part }) => {
                 <div className='text-justify'>
                 <h2 className='card-title text-2xl'>{name}</h2>
                 <h6>{body}</h6>
-                <h5> <span className='text-gray-500'> Price:</span> ${price}</h5>
+                <h5> <span className='text-gray-500'> Price:</span>  ${price}</h5>
                 <h6><span className='text-gray-500'>Minimum Order Quantity:</span> {minQuantity} </h6>
                 <h6><span className='text-gray-500'>Available Quantity:</span> {availableQuantity} </h6>
                 </div>

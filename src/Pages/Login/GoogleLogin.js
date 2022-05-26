@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.config';
 import Loading from '../Shared/Loading';
+import useToken from '../useToken';
 
 const GoogleLogin = () => {
 
@@ -11,14 +12,20 @@ const GoogleLogin = () => {
     const navigate = useNavigate();
     // let alertMessage;
 
+    const [token] = useToken(user);
+    // if(token){
+    //     navigate('/dashboard')
+    // }
+
+
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
     useEffect( ()=>{
-        if(user){
+        if(token){
             navigate(from, { replace: true });
         }
-    },[user, from, navigate])
+    },[token, from, navigate])
 
 
     // let load;
@@ -27,10 +34,15 @@ const GoogleLogin = () => {
     // }
 
     //   let load;
-      if(loading){
-      return <Loading></Loading>
-      }
+    let load;
+    if(loading){
+    //    load= <Loading></Loading>
 
+
+        load = <div className='flex justify-center item-center'>
+        <button className="btn btn-square loading text-accent bg-white border-0 text-bold"></button>
+        </div>
+    }
     let errorMessage;
     if (error) {
         errorMessage= <p className='text-red-500'>{error?.message}</p>
@@ -41,7 +53,7 @@ const GoogleLogin = () => {
         <div>   
             <div>
             {/* {alertMessage} */}
-            {/* {load} */}
+            {load}
             {errorMessage}
             <button  onClick={() => signInWithGoogle()} 
             className="btn btn-accent font-bold text-white w-80 text-base">Continue with Google</button>

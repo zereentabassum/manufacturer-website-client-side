@@ -9,6 +9,7 @@ import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from '../useToken';
 
 
 const Signup = () => {
@@ -22,6 +23,14 @@ const Signup = () => {
       ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification: true});
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+      
+
+      const [token] = useToken(user);
+
+      if(token){
+        navigate('/dashboard')
+    }
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = async data => {
@@ -46,14 +55,12 @@ const Signup = () => {
     //    load= <Loading></Loading>
 
 
-     
-     
-
-
         load = <div className='flex justify-center item-center'>
         <button className="btn btn-square loading text-accent bg-white border-0 text-bold"></button>
         </div>
     }
+
+   
 
         // load = <div className='flex justify-center item-center'>
         // <button className="btn btn-square loading text-secondary bg-white border-0 text-bold"></button>
