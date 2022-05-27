@@ -8,4 +8,5 @@
 * In this website, user will place order and then can pay for the order.
 * User can also cancel their order from our website before payment.
 * Users also can give a review in this website.
-* In this website, an admin will be managing all the products. 
+* In this website,  admin can manage all the products. 
+* Admin can add and delete the products also.

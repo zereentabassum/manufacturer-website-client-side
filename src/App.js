@@ -17,6 +17,8 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
 
 function App() {
 
@@ -45,7 +47,9 @@ function App() {
     <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
     <Route path='addreview' element={<AddReview></AddReview>}></Route>
     <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+    <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
     <Route path='manageorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
+    <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
 
 
 
