@@ -11,7 +11,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?customer=${user.email}`, {
+            fetch(`https://vast-savannah-90121.herokuapp.com/order?customer=${user.email}`, {
                 method: 'GET',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,8 +34,8 @@ const MyOrders = () => {
             <h1 className='text-3xl py-3'>Your Orders: {orders.length}</h1>
 
 
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
@@ -51,14 +51,7 @@ const MyOrders = () => {
                                 <th></th>
                                 <td>{a.orderName}</td>
                                 <td>{a.quantity}</td>
-                                
-                                <td>
-                                    {/* {(a.price && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(a.price && a.paid) && <div>
-                                        <p><span className='text-success'>Paid</span></p>
-                                        <p>Transaction id: <span className='text-success'>{a.transactionId}</span></p>
-                                    </div>} */}
-                                </td>
+                                <td><button>Unpaid</button></td>
                             </tr>)
                         }
 

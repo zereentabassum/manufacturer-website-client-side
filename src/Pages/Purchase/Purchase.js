@@ -16,7 +16,7 @@ const Purchase = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/parts/${_id}`)
+        fetch(`https://vast-savannah-90121.herokuapp.com/parts/${_id}`)
         .then(res=> res.json())
         .then(data=> setPart(data));
     } ,[])
@@ -61,7 +61,7 @@ const Purchase = () => {
 
     console.log(ordering);
 
-    fetch('http://localhost:5000/order', {
+    fetch('https://vast-savannah-90121.herokuapp.com/order', {
         method: 'POST',
         headers: {
             'content-type':'application/json'
@@ -84,9 +84,9 @@ const Purchase = () => {
         <div className=''>
            
 
-           <div class="hero min-h-screen bg-base-200">
+           <div className="hero min-h-screen bg-base-200">
               
-                <div class="hero-content flex-col lg:flex-row pb-5">
+                <div className="hero-content flex-col lg:flex-row pb-5">
                     <div>
                     <h1 className='text-2xl font-semibold text-purple-600'>Username: {user.displayName}</h1>
              <h1 className='text-2xl font-semibold pb-3 text-purple-600'>Email: {user.email}</h1> 
@@ -96,19 +96,19 @@ const Purchase = () => {
                 </div>
                 <div className='text-justify  lg:ml-14 ml-6'>          
                
-                <h1 class="text-5xl font-bold pb-3">{name}</h1>
+                <h1 className="text-5xl font-bold pb-3">{name}</h1>
                 <div className='text-xl  w-3/5'>
-                <h5 class="">{body}</h5>
-                <h5 class=""><span className='text-gray-500'>Price:</span>  ${price}</h5>
-                <h5 class=""><span className='text-gray-500'>Available Quantity:</span>   {availableQuantity}</h5>
-                <h5 class="text-3xl"><span className='text-gray-500 text-3xl'>Minimum Order Quantity:</span>  {minQuantity}</h5>
+                <h5 className="">{body}</h5>
+                <h5 className=""><span className='text-gray-500'>Price:</span>  ${price}</h5>
+                <h5 className=""><span className='text-gray-500'>Available Quantity:</span>   {availableQuantity}</h5>
+                <h5 className="text-3xl"><span className='text-gray-500 text-3xl'>Minimum Order Quantity:</span>  {minQuantity}</h5>
     
                 </div>
 
                
                 <div className='my-5 mx-auto'>
                 <h3 className='text-3xl  font-semibold'>Put Quantity and other informations for order:</h3>
-                {/* <h5 class="text-3xl"><span className='text-gray-500 pr-2'>Minimum Order Quantity:</span></h5> */}
+                {/* <h5 className="text-3xl"><span className='text-gray-500 pr-2'>Minimum Order Quantity:</span></h5> */}
                
                 {/* <button className='btn btn-secondary text-2xl'>-</button>
                 <h5 className='text-3xl text-accent font-bold mx-4'>{number}</h5>

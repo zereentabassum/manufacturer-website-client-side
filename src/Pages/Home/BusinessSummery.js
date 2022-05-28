@@ -12,33 +12,33 @@ const BusinessSummery = () => {
             
             {/* we served 100+ customers, 120M+ Annual revenue, 33K+ Reviews, 50+ tools,  */}
 
-            <div class="stats stats-vertical lg:stats-horizontal shadow bg-violet-100">
+            <div className="stats stats-vertical lg:stats-horizontal shadow bg-violet-100">
   
-                <div class="stat w-60 h-52 ">
+                <div className="stat w-60 h-52 ">
 
                     <div className='pl-14'>< IoIosPeople size={52} color="purple"/></div>
-                    <div class="stat-value "><h2 className='text-5xl font-semibold text-accent'>100+</h2></div>
-                    <div class="stat-title text-2xl text-purple-800"><h3>Customers</h3></div>
+                    <div className="stat-value "><h2 className='text-5xl font-semibold text-accent'>100+</h2></div>
+                    <div className="stat-title text-2xl text-purple-800"><h3>Customers</h3></div>
                 </div>
                 
-                <div class="stat w-60 h-52">
+                <div className="stat w-60 h-52">
                 <div className='pl-14'>< FcSurvey size={52} color="purple"/></div>
 
-                    <div class="stat-value"><h2 className='text-5xl font-semibold text-accent'>80M+</h2></div>
-                    <div class="stat-title text-2xl text-purple-800"><h3>Annual revenue</h3> </div>
+                    <div className="stat-value"><h2 className='text-5xl font-semibold text-accent'>80M+</h2></div>
+                    <div className="stat-title text-2xl text-purple-800"><h3>Annual revenue</h3> </div>
                 </div>
                 
-                <div class="stat w-60 h-52">
+                <div className="stat w-60 h-52">
                 <div className='pl-14'>< MdRateReview size={52}/></div>
 
-                    <div class="stat-value"><h2 className='text-5xl font-semibold text-accent'>12k+</h2></div>
-                    <div class="stat-title text-2xl text-purple-800"><h3> Reviews</h3></div>
+                    <div className="stat-value"><h2 className='text-5xl font-semibold text-accent'>12k+</h2></div>
+                    <div className="stat-title text-2xl text-purple-800"><h3> Reviews</h3></div>
                 </div>
-                <div class="stat w-60 h-52">
+                <div className="stat w-60 h-52">
                 <div className='pl-14'>< RiComputerLine size={52}/></div>
 
-                    <div class="stat-value"><h2 className='text-5xl font-semibold text-accent'>20+</h2></div>
-                    <div class="stat-title text-2xl text-purple-800"><h3> Parts</h3></div>
+                    <div className="stat-value"><h2 className='text-5xl font-semibold text-accent'>20+</h2></div>
+                    <div className="stat-title text-2xl text-purple-800"><h3> Parts</h3></div>
                 </div>
                 
                 </div>

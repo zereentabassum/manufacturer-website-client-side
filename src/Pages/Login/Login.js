@@ -131,7 +131,7 @@ const Login = () => {
             />
              {errors.email?.type ==='required' && <span className='text-red-500 '>{errors.password.message}</span>}
             {/* {errors.password?.type ==='minLength' && <span className='text-red-500'>{errors.password.message}</span>} */}
-            {/* <p onClick={passwordReset} class="btn btn-link text-blue-400 text-left">Forgot Password? Reset</p> */}
+            {/* <p onClick={passwordReset} className="btn btn-link text-blue-400 text-left">Forgot Password? Reset</p> */}
 
                 
         {/*--------- Login Button ------- */}

@@ -6,7 +6,7 @@ const useParts = () =>{
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/parts')
+        fetch('https://vast-savannah-90121.herokuapp.com/parts')
         .then(res=> res.json())
         .then(data=> setParts(data));
     } ,[])

@@ -1,15 +1,21 @@
 import React from 'react';
+import { FcApproval } from "react-icons/fc";
+
 
 const Carousal = () => {
     return (
-        <div>
-            <div class="hero min-h-fit">
-            <div class="hero-overlay bg-opacity-60"></div>
-            <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-            <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class="btn btn-primary">Get Started</button>
+        <div className='bg-gradient-to-r from-purple-100 to-purple-300 my-24 py-14'>
+            <div className="hero min-h-fit bg-purple-400 py-9">
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content text-center text-neutral-content">
+            <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Why we are good in this field?</h1> 
+            <div className='text-left pl-7'>
+            <h3 className='text-2xl py-2 flex'><span className='pr-3'><FcApproval/></span>  Advance Technologies</h3>
+            <h3 className='text-2xl py-2 flex'><span className='pr-3'><FcApproval/></span>  Quick Works</h3>
+            <h3 className='text-2xl py-2 flex'><span className='pr-3'><FcApproval/></span>  Fast Delivery</h3>
+            <h3 className='text-2xl py-2 flex'><span className='pr-3'><FcApproval/></span>  Experience in this</h3>
+            </div>
             </div>
             </div>
             </div>
@@ -18,3 +24,5 @@ const Carousal = () => {
 };
 
 export default Carousal;
+
+
