@@ -3,10 +3,11 @@
 ## Live Website Link: [https://manufacturer-e9f22.web.app/](https://manufacturer-e9f22.web.app/)
 
 ## My websites features and functionalities :
-* My website is a computer parts manufacturer website.
-* User can place order for different parts of computer from here.
-* In this website, user will place order and then can pay for the order.
-* User can also cancel their order from our website before payment.
-* Users also can give a review in this website.
-* In this website,  admin can manage all the products. 
-* Admin can add and delete the products also.
+* My website is a functional full stack computer parts manufacturer website.
+* The user interface of this website is designed with Tailwind CSS and DaisyUI.
+* Users can place order for different parts of computer from here.
+* Users also can give their feedback in this website.
+* Users can also cancel their order or manage them from our website before payment.
+* An admin can manage all the products and orders.
+* Admin can add and delete the products and also manage all the users.
+* An admin has the ability to make other users admin too.
