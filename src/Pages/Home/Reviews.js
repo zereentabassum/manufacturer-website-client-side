@@ -6,15 +6,15 @@ const Reviews = () => {
 
 
     useEffect(()=>{
-        fetch('https://vast-savannah-90121.herokuapp.com/reviews')
+        fetch('http://localhost:5000/reviews')
         .then(res=> res.json())
         .then(data=> setReviews(data));
     } ,[])
 
     return (
-        <div>
-            <h1 className='text-4xl font-semibold'>Reviews</h1>
-            <div>
+        <div className='my-28'>
+            {/* <h1 className='text-4xl font-semibold'>Reviews</h1> */}
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  gap-7'>
                 {
                        reviews.map(review=> <Review key={review._id} review={review}></Review>)
                 }

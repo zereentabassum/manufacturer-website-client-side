@@ -11,10 +11,10 @@ const Part = ({ part }) => {
     }
 
     return (
-        <div>
-            <div className="card w-96 bg-purple-300 hover:bg-white hover:border-4 shadow-xl hover:border-purple-300">
-            <figure className="px-10 pt-10 part-img">
-                <img className='' src={img} alt="Shoes" className="rounded-xl" />
+        
+            <div className="card w-96 bg-purple-300 hover:bg-white border-2 border-purple-300 hover:border-2 shadow-xl hover:border-purple-300 mb-10">
+            <figure className=" pt-10 part-img">
+                <img src={img} alt="Shoes"  className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-left font-semibold ">
                 <div className='text-justify'>
@@ -25,12 +25,12 @@ const Part = ({ part }) => {
                 <h6><span className='text-gray-500'>Available Quantity:</span> {availableQuantity} </h6>
                 </div>
                 <div className="card-actions">
-                <button onClick={navigateToPurchase}  className="btn bg-gradient-to-r from-accent to-primary text-white px-9 ">Purchase</button>
+                <button onClick={navigateToPurchase}  className="btn bg-gradient-to-r from-accent to-primary text-white px-9 hover:filter hover:brightness-110 border-2 border-transparent hover:border-primary" >Purchase</button>
 
                 </div>
             </div>
             </div>
-        </div>
+        
     );
 };
 

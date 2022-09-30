@@ -94,7 +94,7 @@ const Purchase = () => {
                 
                 <img className='w-96 lg:mx-10' src={img} alt="" />
                 </div>
-                <div className='text-justify  lg:ml-14 ml-6'>          
+                <div className='text-justify  lg:ml-14 ml-0'>          
                
                 <h1 className="text-5xl font-bold pb-3">{name}</h1>
                 <div className='text-xl  w-3/5'>
@@ -115,21 +115,21 @@ const Purchase = () => {
                 <button onClick={add} className='btn btn-secondary text-2xl'>+</button> */}
                 <form onSubmit={handleOrder}>
                     <div  className='flex mt-6'>
-                    <input className='border-2 border-purple-300 py-2 px-2' type="number" name="quantity" placeholder='Put quantity' id="" required/>
+                    <input className='border-2 border-purple-300 py-2 px-1' type="number" name="quantity" placeholder='Put quantity' id="" required/>
                 <h3 className='text-xl pl-2 text-blue-500'>(Minimum order quantity is: {minQuantity} and maximum is: {availableQuantity})</h3>
                 </div>
                 <br />
-                    <input className='border-2 border-purple-300 py-2 my-1 px-2' type="text" name="address" placeholder='Address' id="" required/>
+                    <input className='border-2 border-purple-300 py-2 my-1 px-1' type="text" name="address" placeholder='Address' id="" required/>
                     <br />
-                    {/* <input className='border-2 border-purple-300 py-2 my-1 px-2' type="email" name="email" placeholder='Email' id="" required/>
+                    {/* <input className='border-2 border-purple-300 py-2 my-1 px-1' type="email" name="email" placeholder='Email' id="" required/>
                     <br /> */}
                     
-                    <input className='border-2 border-purple-300 py-2 my-1 px-2' type="number" name="phone" placeholder='Phone number' id="" required/>
+                    <input className='border-2 border-purple-300 py-2 my-1 px-1' type="number" name="phone" placeholder='Phone number' id="" required/>
                     <br />
                
                    
               
-                <input className='btn btn-primary px-7 my-6 ml-4' type="submit" name='submit' value="Order" />
+                <input className='btn btn-primary px-7 my-6 text-white' type="submit" name='submit' value="Order" />
                 {/* <button className='btn btn-primary px-7 my-6 ml-4'>Order</button> */}
                 
                 </form>

@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.config';
 import Loading from '../Shared/Loading';
 import useToken from '../useToken';
+import {FcGoogle} from 'react-icons/fc';
 
 const GoogleLogin = () => {
 
@@ -56,7 +57,7 @@ const GoogleLogin = () => {
             {load}
             {errorMessage}
             <button  onClick={() => signInWithGoogle()} 
-            className="btn btn-accent font-bold text-white w-80 text-base">Continue with Google</button>
+            className="btn btn-accent font-bold text-white w-80 text-base"><FcGoogle size={32} className='pr-2 brightness-200'/> Continue with Google   </button>
           
         </div>
         </div>

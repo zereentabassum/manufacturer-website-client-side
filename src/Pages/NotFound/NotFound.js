@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div className='flex justify-evenly'>
-            <div className='pt-24 ml-5'>
+            <div className='pt-24'>
             <h1 className='lg:text-8xl text-6xl'>404</h1>
             <h2 className='lg:text-4xl text-2xl'>Page Not Found</h2>
             </div>

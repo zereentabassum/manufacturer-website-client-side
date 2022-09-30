@@ -8,9 +8,9 @@ const Parts = () => {
     const [parts, setParts] = useParts();
 
     return (
-        <div className='pt-28 parts bg-gradient-to-r from-purple-100 to-neutral pb-10'>
-            <h1 className='text-5xl font-mono pb-7'>Computer Parts</h1>
-            <div className='grid lg:grid-cols-3 grid-cols-1 gap-10 mx-8'>
+        <div className='py-16 parts bg-slate-100 '>
+            <h1 className='text-5xl text-primary font-semibold pb-10'>Computer Parts</h1>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  justify-items-center '>
             {
                   
                     parts.map(part=> <Part key={part._id} part={part}></Part>)

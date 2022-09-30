@@ -37,7 +37,7 @@ const AddProduct = () => {
            <br />
            <input className='mb-2 input input-bordered input-primary w-full max-w-xs my-2' placeholder='Price' type="text" {...register("price")} />
            <br />
-           <input className='btn btn-primary mt-1' type="submit" />
+           <input className='btn btn-primary mt-1 text-white' type="submit" />
            <br />
           
         </form>

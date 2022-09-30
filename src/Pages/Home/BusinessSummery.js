@@ -6,12 +6,10 @@ import { FcSurvey } from "react-icons/fc";
 
 const BusinessSummery = () => {
     return (
-        <div className='py-24 mt-10'>
+        <div className='mt-24 mb-14'>
             <h1 className='text-5xl pt-12 pb-9 font-semibold text-primary'>Business Summery</h1>
             <h2 className='text-3xl font-serif pb-5 text-purple-500'>We Have Served</h2>
             
-            {/* we served 100+ customers, 120M+ Annual revenue, 33K+ Reviews, 50+ tools,  */}
-
             <div className="stats stats-vertical lg:stats-horizontal shadow bg-violet-100">
   
                 <div className="stat w-60 h-52 ">
